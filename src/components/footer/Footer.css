@@ -1,0 +1,41 @@
+/* Main container for the footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Content within the footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  max-width: 1480px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Social media icons container */
+.social-media {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Text container for rights reserved */
+.rights-reserved {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Styling for social media icons */
+.icon {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+}

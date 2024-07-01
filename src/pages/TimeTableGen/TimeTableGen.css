@@ -1,0 +1,36 @@
+.TimeTableGen {
+  min-height: 90vh;
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+}
+.MuiTabs-scroller {
+  display: flex;
+  justify-content: center;
+}
+
+.MuiTabs-flexContainer {
+  justify-content: center;
+}
+.TimeTableGen {
+  background-color: #f0f0f0;
+}
+
+.tabContent {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.tabContent h2 {
+  margin-bottom: 20px;
+}
+
+.tabContent .MuiTextField-root {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tabContent .MuiFormControl-root {
+  max-width: 100%;
+}
