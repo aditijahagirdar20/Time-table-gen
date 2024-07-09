@@ -2,13 +2,14 @@ import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+// import TextField from "@mui/material/TextField";
 import "./TimeTableGen.css";
 import AddRooms from "./components/AddRooms";
 import AddTime from "./components/AddTime";
 import AddCourses from "./components/AddCourses";
 import AddDepartments from "./components/AddDepartments";
 import AddSections from "./components/AddSections";
+import AddTeachers from "./components/AddTeachers";
 
 function TimeTableGen() {
   const [value, setValue] = React.useState(0);
@@ -20,29 +21,7 @@ function TimeTableGen() {
   const renderTabContent = (tabIndex) => {
     switch (tabIndex) {
       case 0:
-        return (
-          <div className="tabContent">
-            <h2>Add Teachers</h2>
-            <TextField
-              label="Teacher ID"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-            />
-            <TextField
-              label="Full Name"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-            />
-            <TextField
-              label="Designation"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-            />
-          </div>
-        );
+        return <AddTeachers />;
       case 1:
         return <AddRooms />;
       case 2:
