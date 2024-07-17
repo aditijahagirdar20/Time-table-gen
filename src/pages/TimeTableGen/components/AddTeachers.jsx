@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { TextField, Button, Box } from "@mui/material";
+import {
+  TextField,
+  Button,
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addTeacher,
@@ -95,27 +102,40 @@ const AddTeachers = () => {
         </Button>
       </Box>
       <h2 className="tabHeading">View/Edit Teachers</h2>
-      <ul>
+      <List>
         {teachers.map((teacher) => (
-          <li key={teacher.id}>
-            {teacher.fullName} ({teacher.designation})
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={() => handleEditTeacher(teacher)}
-            >
-              Edit
-            </Button>
-            <Button
-              variant="contained"
-              color="error"
-              onClick={() => handleRemoveTeacher(teacher.id)}
-            >
-              Remove
-            </Button>
-          </li>
+          <ListItem
+            key={teacher.id}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <ListItemText
+              primary={`${teacher.fullName} (${teacher.designation})`}
+            />
+            <Box sx={{ display: "flex", gap: 1 }}>
+              <Button
+                variant="contained"
+                color="secondary"
+                size="small"
+                onClick={() => handleEditTeacher(teacher)}
+              >
+                Edit
+              </Button>
+              <Button
+                variant="contained"
+                color="error"
+                size="small"
+                onClick={() => handleRemoveTeacher(teacher.id)}
+              >
+                Remove
+              </Button>
+            </Box>
+          </ListItem>
         ))}
-      </ul>
+      </List>
     </div>
   );
 };
